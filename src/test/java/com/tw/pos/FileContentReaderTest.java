@@ -19,7 +19,7 @@ public class FileContentReaderTest {
     @Test
     public void should_return_the_cart_info_when_given_the_cart_file_path() throws IOException {
         //given
-        String filePath = "./src/main/resources/datas/cart.txt";
+        String filePath = FileSource.CART_INFO_FILE_PATH;
         FileContentReader fReader = new FileContentReader();
 
         //when
