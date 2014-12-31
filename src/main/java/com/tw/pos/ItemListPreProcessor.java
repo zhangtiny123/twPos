@@ -23,5 +23,4 @@ public class ItemListPreProcessor {
         }
         return goodList;
     }
-
 }

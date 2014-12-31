@@ -12,6 +12,10 @@ public class Item {
         this.count = count;
     }
 
+    public int getCount() {
+        return count;
+    }
+
     public Good getGood() {
         return good;
     }
@@ -21,6 +25,6 @@ public class Item {
     }
 
     public double calculatePayments() {
-        return this.good.getPrice() * this.count;
+        return this.good.getDiscountedPrice() * this.count;
     }
 }
