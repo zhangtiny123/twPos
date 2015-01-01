@@ -1,5 +1,6 @@
 package com.tw.pos;
 
+import com.tw.pos.models.Good;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

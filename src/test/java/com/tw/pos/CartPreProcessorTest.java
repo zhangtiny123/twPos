@@ -1,5 +1,9 @@
 package com.tw.pos;
 
+import com.tw.pos.door.FileContentReader;
+import com.tw.pos.models.Item;
+import com.tw.pos.processors.CartPreProcessor;
+import com.tw.pos.processors.ItemListPreProcessor;
 import org.junit.Test;
 
 import java.io.IOException;

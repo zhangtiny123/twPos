@@ -1,5 +1,9 @@
 package com.tw.pos;
 
+import com.tw.pos.discounts.SecondHalfHandler;
+import com.tw.pos.door.FileContentReader;
+import com.tw.pos.models.Good;
+import com.tw.pos.models.Item;
 import org.junit.Test;
 
 import java.io.IOException;
