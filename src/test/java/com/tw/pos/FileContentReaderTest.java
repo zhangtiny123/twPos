@@ -1,6 +1,6 @@
 package com.tw.pos;
 
-import com.tw.pos.door.FileContentReader;
+import com.tw.pos.inDoor.FileContentReader;
 import com.tw.pos.helper.FileSource;
 import org.junit.Test;
 

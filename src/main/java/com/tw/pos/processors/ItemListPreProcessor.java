@@ -1,6 +1,6 @@
 package com.tw.pos.processors;
 
-import com.tw.pos.door.FileContentReader;
+import com.tw.pos.inDoor.FileContentReader;
 import com.tw.pos.helper.FileSource;
 import com.tw.pos.models.Good;
 

@@ -2,7 +2,7 @@ package com.tw.pos;
 
 import com.tw.pos.discounts.DiscountPromotionHandler;
 import com.tw.pos.discounts.SecondHalfHandler;
-import com.tw.pos.door.FileContentReader;
+import com.tw.pos.inDoor.FileContentReader;
 import com.tw.pos.models.Item;
 import com.tw.pos.processors.CartPreProcessor;
 import com.tw.pos.processors.ItemListPreProcessor;
@@ -22,7 +22,7 @@ public class Runner {
 
         double totalPayments = 0;
         double totalPaymentsBeforeDiscount = 0;
-        System.out.println("购物明细     数量    单价   小计");
+        System.out.println("购物明细     数量      单价   小计");
         for (Item item : cart.process_list()) {
             double itemTotal = 0;
             if (discount.is_discounted(item.getGood())){
@@ -36,7 +36,7 @@ public class Runner {
             }
             totalPayments += itemTotal;
             totalPaymentsBeforeDiscount += item.getGood().getPrice() * item.getCount();
-            System.out.println(item.getGood().getBarcode()+"   "+item.getCount()+"    "+item.getGood().getPrice()+"    "
+            System.out.println(item.getGood().getBarcode()+"   "+item.getCount()+"       "+item.getGood().getPrice()+"   "
                     +itemTotal);
         }
         System.out.println("总计金额     优惠前   优惠后   优惠差价");

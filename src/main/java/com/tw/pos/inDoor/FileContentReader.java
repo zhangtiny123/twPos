@@ -1,4 +1,4 @@
-package com.tw.pos;
+package com.tw.pos.inDoor;
 
 import java.io.*;
 import java.util.ArrayList;

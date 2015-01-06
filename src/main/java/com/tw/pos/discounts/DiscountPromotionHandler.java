@@ -1,6 +1,6 @@
 package com.tw.pos.discounts;
 
-import com.tw.pos.door.FileContentReader;
+import com.tw.pos.inDoor.FileContentReader;
 import com.tw.pos.helper.FileSource;
 import com.tw.pos.models.Good;
 import com.tw.pos.models.Item;
@@ -20,7 +20,7 @@ public class DiscountPromotionHandler {
         this.fileContentReader = fileContentReader;
     }
 
-    public Map<String, Integer> getDiscountPromotionMap() throws IOException {
+    private Map<String, Integer> getDiscountPromotionMap() throws IOException {
         Map<String, Integer> map = new HashMap<String, Integer>();
         List<String> stringList = fileContentReader.readData(FileSource.DISCOUNT_PROMOTION_INFO_FILE_PATH);
         for (String temp : stringList) {
