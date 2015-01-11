@@ -13,7 +13,7 @@ public class FileContentReader {
         String temp = "";
         List<String> resultList = new ArrayList<String>();
 
-        if(file.isFile() && file.exists()) {
+        if(file.exists()) {
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
 

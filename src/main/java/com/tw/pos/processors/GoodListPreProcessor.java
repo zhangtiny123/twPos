@@ -11,10 +11,10 @@ import java.util.List;
 /**
  * Created by taozhang on 12/29/14.
  */
-public class ItemListPreProcessor {
+public class GoodListPreProcessor {
     private FileContentReader fileContentReader;
 
-    public ItemListPreProcessor(FileContentReader fileContentReader) {
+    public GoodListPreProcessor(FileContentReader fileContentReader) {
         this.fileContentReader = fileContentReader;
     }
 

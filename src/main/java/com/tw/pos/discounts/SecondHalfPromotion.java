@@ -11,16 +11,15 @@ import java.util.List;
 /**
  * Created by taozhang on 12/30/14.
  */
-public class SecondHalfHandler {
-    FileContentReader fileContentReader;
+public class SecondHalfPromotion {
+    private List<String> secondHalfList;
 
-    public SecondHalfHandler(FileContentReader fileContentReader) {
-        this.fileContentReader = fileContentReader;
+    public SecondHalfPromotion(FileContentReader fileContentReader) throws IOException {
+        this.secondHalfList = fileContentReader.readData(FileSource.SECOND_HALF_PROMOTION_INFO_FILE_PATH);
     }
 
     public Boolean isSecondHalf(Good good) throws IOException {
-        List<String> stringList = fileContentReader.readData(FileSource.SECOND_HALF_PROMOTION_INFO_FILE_PATH);
-        return stringList.contains(good.getBarcode());
+        return secondHalfList.contains(good.getBarcode());
     }
 
     public double discountFor(Item item) throws IOException {

@@ -13,17 +13,16 @@ import java.util.Map;
 /**
  * Created by taozhang on 12/30/14.
  */
-public class DiscountPromotionHandler {
-    private FileContentReader fileContentReader;
+public class DiscountPromotion {
+    private List<String> discountList;
 
-    public DiscountPromotionHandler(FileContentReader fileContentReader) {
-        this.fileContentReader = fileContentReader;
+    public DiscountPromotion(FileContentReader fileContentReader) throws IOException {
+        this.discountList = fileContentReader.readData(FileSource.DISCOUNT_PROMOTION_INFO_FILE_PATH);
     }
 
     private Map<String, Integer> getDiscountPromotionMap() throws IOException {
         Map<String, Integer> map = new HashMap<String, Integer>();
-        List<String> stringList = fileContentReader.readData(FileSource.DISCOUNT_PROMOTION_INFO_FILE_PATH);
-        for (String temp : stringList) {
+        for (String temp : discountList) {
             String[] strings = temp.split(":");
             map.put(strings[0], Integer.parseInt(strings[1]));
         }
