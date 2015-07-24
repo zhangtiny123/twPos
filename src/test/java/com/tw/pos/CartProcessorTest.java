@@ -45,6 +45,7 @@ public class CartProcessorTest {
     @Test
     public void should_return_the_origin_total_payments_540_when_given_the_cart_list_with_getOriginTotal_called(){
         double originTotal = cartProcessor.getOriginTotal();
+
         assertThat(originTotal, is(540.0));
     }
 

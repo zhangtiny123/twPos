@@ -21,12 +21,12 @@ public class DiscountPromotion {
     }
 
     private Map<String, Integer> getDiscountPromotionMap() throws IOException {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> promotionMap = new HashMap<String, Integer>();
         for (String temp : discountList) {
             String[] strings = temp.split(":");
-            map.put(strings[0], Integer.parseInt(strings[1]));
+            promotionMap.put(strings[0], Integer.parseInt(strings[1]));
         }
-        return map;
+        return promotionMap;
     }
 
     public Boolean is_discounted(Good good) throws IOException {
